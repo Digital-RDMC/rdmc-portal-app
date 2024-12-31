@@ -1,7 +1,18 @@
+'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  async function fetchData() {
+    try {
+      const response = await fetch('/api/hello');
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+  
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -13,12 +24,7 @@ export default function Home() {
           height={38}
           priority
         />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+     
 
         <div className={styles.ctas}>
           <a
@@ -45,6 +51,9 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <button onClick={fetchData} className={styles.fetchButton}>
+          Fetch Data
+        </button>
       </main>
       <footer className={styles.footer}>
         <a
