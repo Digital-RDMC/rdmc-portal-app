@@ -3,16 +3,31 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
-  async function fetchData() {
-    try {
-      const response = await fetch('/api/hello');
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  }
-  
+  // async function fetchData() {
+  //   try {
+  //     const response = await fetch('/api/hello');
+  //     const data = await response.json();
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // }
+
+ async function addData () {
+    const response = await fetch('/api/users', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        // body: JSON.stringify({ key: 'exampleKey', value: 'exampleValue' }),
+    });
+
+    const data = await response.json();
+    console.log(data);
+};
+
+
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -51,7 +66,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-        <button onClick={fetchData} className={styles.fetchButton}>
+        <button onClick={addData} className={styles.fetchButton}>
           Fetch Data
         </button>
       </main>
