@@ -32,6 +32,7 @@ export default function Home() {
           </UserButton.MenuItems>
         )}
       </UserButton>
+      Hello
     </header>
   )
 }
