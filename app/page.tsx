@@ -63,7 +63,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className={styles.secondary}
           >
-            Read our RDMC docs
+            Read Siso
           </a>
         </div>
         {/* <button onClick={addData} className={styles.fetchButton}>
