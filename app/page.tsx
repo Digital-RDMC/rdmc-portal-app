@@ -57,14 +57,14 @@ export default function Home() {
             />
             Deploy now
           </a>
-          {/* <a
+           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.secondary}
           >
-            Read our docs
-          </a> */}
+            Read our RDMC docs
+          </a>
         </div>
         {/* <button onClick={addData} className={styles.fetchButton}>
           Fetch Data
