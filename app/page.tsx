@@ -13,18 +13,18 @@ export default function Home() {
   //   }
   // }
 
- async function addData () {
-    const response = await fetch('/api/users', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        // body: JSON.stringify({ key: 'exampleKey', value: 'exampleValue' }),
-    });
+//  async function addData () {
+//     const response = await fetch('/api/users', {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         // body: JSON.stringify({ key: 'exampleKey', value: 'exampleValue' }),
+//     });
 
-    const data = await response.json();
-    console.log(data);
-};
+//     const data = await response.json();
+//     console.log(data);
+// };
 
 
 
@@ -66,9 +66,9 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-        <button onClick={addData} className={styles.fetchButton}>
+        {/* <button onClick={addData} className={styles.fetchButton}>
           Fetch Data
-        </button>
+        </button> */}
       </main>
       <footer className={styles.footer}>
         <a
