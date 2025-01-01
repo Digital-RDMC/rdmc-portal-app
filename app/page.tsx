@@ -57,7 +57,7 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Employee
+            Email verification
        
           </Link>
            <a
@@ -66,7 +66,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className={styles.secondary}
           >
-            Non Employee
+            SMS verification
           </a>
         </div>
         {/* <button onClick={addData} className={styles.fetchButton}>
