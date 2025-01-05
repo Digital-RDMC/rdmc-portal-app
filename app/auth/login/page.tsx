@@ -20,7 +20,7 @@ export default function LoginPage() {
 
 
                   <div className="relative my-5 text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
-            <span className="relative z-10 bg-transparent px-2 text-muted-foreground">
+            <span className="relative z-10 bg-background px-2 text-muted-foreground">
               {t('auth.LoginBy')}
             </span>
           </div>

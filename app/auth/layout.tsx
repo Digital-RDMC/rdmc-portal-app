@@ -44,7 +44,7 @@ export default function LoginLayout({
 
 
 
-    <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-slate-100 p-6 md:p-10 bg-[url('/worldmap2.svg')] bg-cover bg-center" >
+    <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-background p-6 md:p-10 " >
 
       <div className="w-full max-w-sm">
         {/* <LoginForm /> */}
@@ -75,7 +75,7 @@ export default function LoginLayout({
 
        
         <div className="relative my-5 mt-20 text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
-            <span className="relative z-10 bg-transparent px-2 text-muted-foreground">
+            <span className="relative z-10 bg-background px-2 text-muted-foreground">
               {t('auth.Language')}
             </span>
           </div>

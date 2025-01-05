@@ -22,6 +22,8 @@ LoginByPhone: "Login By Phone",
 phone: "Phone",
 LoginBy: "Login By",
 Back: "Back",
+PleaseWait: "Please Wait",
+token: "Token",
 
     },
   },

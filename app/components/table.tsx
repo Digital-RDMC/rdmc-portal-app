@@ -39,6 +39,7 @@ export default function Emps({api}: {api: string}) {
     fetchData(); // Call the async function
   },[api]); // Empty dependency array to run only once on component mount
 
+  
   return (
     <div>
       {empsData.length > 0 ? (
