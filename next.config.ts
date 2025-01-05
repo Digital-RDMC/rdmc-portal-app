@@ -1,10 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   i18n: {
-    locales: ['en', 'fr', 'ar'], // Add your supported languages here
-    defaultLocale: 'en', // Default language
+    defaultLocale: "en", // Default language
+    locales: ["en", "fr", "ar"], // Supported languages
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'flagcdn.com',
+        pathname: '/**', // Allow all paths
+      },
+    ],
   },
 };
 

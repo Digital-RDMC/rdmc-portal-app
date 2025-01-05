@@ -1,19 +1,14 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    darkMode: ['class'],
+import type { Config } from "tailwindcss";
+
+export default {
+    darkMode: ["class"],
     content: [
-    './app/**/*.{js,ts,jsx,tsx}', // For the new app directory
-    './pages/**/*.{js,ts,jsx,tsx}', // For the traditional pages directory
-    './components/**/*.{js,ts,jsx,tsx}', // For shared components
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
   	extend: {
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -45,6 +40,10 @@ module.exports = {
   				DEFAULT: 'hsl(var(--destructive))',
   				foreground: 'hsl(var(--destructive-foreground))'
   			},
+  			color1: {
+  				DEFAULT: 'hsl(var(--color1))',
+  				foreground: 'hsl(var(--color1-foreground))'
+  			},
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
@@ -65,8 +64,13 @@ module.exports = {
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
   			}
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
   		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
-};
+} satisfies Config;
